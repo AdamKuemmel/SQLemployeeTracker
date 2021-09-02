@@ -1,41 +1,33 @@
 [
   {
-    "id": 1,
     "title": "Sales Lead",
     "salary": 100000
   },
   {
-    "id": 2,
     "title": "Salesperson",
     "salary": 80000
   },
   {
-    "id": 3,
     "title": "Lead Engineer",
     "salary": 150000
   },
   {
-    "id": 4,
     "title": "Software Engineer",
     "salary": 120000
   },
   {
-    "id": 5,
     "title": "Account Manager",
     "salary": 160000
   },
   {
-    "id": 6,
     "title": "Accountant",
     "salary": "125000"
   },
   {
-    "id": 7,
     "title": "Lgal Team Lead",
     "salary": 250000
   },
   {
-    "id": 8,
     "title": "Lawyer",
     "salary": 190000
   }
