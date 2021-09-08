@@ -3,7 +3,7 @@ const sequelize = require("../config/connection");
 
 class Role extends Model {}
 
-Role.init(
+const role = Role.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -16,7 +16,7 @@ Role.init(
       allowNull: false,
     },
     salary: {
-      type: DataTypes.DECIMAL,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     department_id: {
@@ -28,10 +28,11 @@ Role.init(
     },
   },
   {
-    sequelize,
+    sequelize: sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
     modelName: "role",
   }
 );
+module.exports = Role;

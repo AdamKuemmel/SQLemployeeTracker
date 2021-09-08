@@ -8,8 +8,8 @@ Employee.init(
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true,
       autoIncrement: true,
+      primaryKey: true,
     },
     first_name: {
       type: DataTypes.STRING,
@@ -30,14 +30,15 @@ Employee.init(
     },
     manager_id: {
       type: DataTypes.INTEGER,
-      references: {
-        model: "employee",
-        key: "id",
-      },
+      // allowNull: true,
+      // references: {
+      //   model: "employee",
+      //   key: "id",
+      // },
     },
   },
   {
-    sequelize,
+    sequelize: sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,

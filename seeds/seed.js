@@ -8,9 +8,9 @@ const roleSeedData = require("./roleSeedData.json");
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  const Department = await Driver.bulkCreate(DPSeedData);
-  const Role = await Driver.bulkCreate(roleSeedData);
-  const Employee = await Driver.bulkCreate(EmployeeSeedData);
+  await Department.bulkCreate(DPSeedData);
+  await Role.bulkCreate(roleSeedData);
+  await Employee.bulkCreate(employeeSeedData);
 
   process.exit(0);
 };

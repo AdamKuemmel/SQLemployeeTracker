@@ -2,51 +2,71 @@
   {
     "id": 1,
     "first_name": "Adam",
-    "last_name": "Kuemmel"
+    "last_name": "Kuemmel",
+    "role_id": 3,
+    "manager_id": null
   },
   {
     "id": 2,
     "first_name": "Rick",
-    "last_name": "Grimes"
+    "last_name": "Grimes",
+    "role_id": 4,
+    "manager_id": 1
   },
   {
     "id": 3,
     "first_name": "Daryl",
-    "last_name": "Dixon"
+    "last_name": "Dixon",
+    "role_id": 1,
+    "manager_id": 1
   },
   {
     "id": 4,
     "first_name": "Maggie",
-    "last_name": "Green"
+    "last_name": "Green",
+    "role_id": 2,
+    "manager_id": 1
   },
   {
     "id": 5,
     "first_name": "Carol",
-    "last_name": "Peletier"
+    "last_name": "Peletier",
+    "role_id": 5,
+    "manager_id": 7
   },
   {
     "id": 6,
     "first_name": "Tara",
-    "last_name": "Chambler"
+    "last_name": "Chambler",
+    "role_id": 6,
+    "manager_id": 7
   },
   {
     "id": 7,
     "first_name": "Eugene",
-    "last_name": "Porter"
+    "last_name": "Porter",
+    "role_id": 7,
+    "manager_id": null
   },
   {
     "id": 8,
     "first_name": "Rosita",
-    "last_name": "Espinosa"
+    "last_name": "Espinosa",
+    "role_id": 4,
+    "manager_id": 1
   },
   {
     "id": 9,
     "first_name": "Jeffery",
-    "last_name": "Morgan"
+    "last_name": "Morgan",
+    "role_id": 2,
+    "manager_id": 1
   },
   {
     "id": 10,
     "first_name": "Jeff",
-    "last_name": "Johnson"
+    "last_name": "Johnson",
+    "role_id": 8,
+    "manager_id": 7
   }
 ]
