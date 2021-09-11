@@ -155,50 +155,80 @@ addEmp = () => {
     });
 };
 
-function updateEmp() {
-  const { worker, newrole } = inquirer.prompt([
+async function updateEmp() {
+  const emp = await Employee.findAll();
+  const stringEmp = JSON.stringify(emp);
+  const parseEmp = JSON.parse(stringEmp);
+  let names;
+  workers = () => {
+    parseEmp.forEach((key) => {
+      const firstName = key.first_name;
+      const lastName = key.last_name;
+
+      // var obj = parseEmp[key];
+
+      names = firstName + " " + lastName;
+      return names;
+    });
+  };
+  workers();
+  console.log(names);
+  const { worker, newrole } = await inquirer.prompt([
     {
       type: "list",
       message: "Choose an employee to update:",
       name: "worker",
-      choices: () => {
-        // iterating over employees and selecting the user selected
-        return Employee.map((employee) => employee.last_name);
-      },
+      choices: [names],
+
+      // () => {
+      // console.log(parseEmp);
+      // return parseEmp;
+      // },
     },
     {
       type: "list",
       message: "What is this employee's new role?",
       name: "newrole",
       choices: () => {
+        ["hi"];
         // updating role id
-        return Employee.map((employee) => employee.role_id);
+        // workers = () => {
+        //   parseEmp.forEach((key) => {
+        //     const firstName = key.first_name;
+
+        //     console.log(firstName);
+        //     // var obj = parseEmp[key];
+
+        //     let names = key.first_name + " " + key.last_name;
+
+        //     return names;
+        //   });
+        // };
       },
     },
   ]);
-  sequelize.query(
-    // updated employee with the user provided role id and last name
-    "UPDATE employees SET ? WHERE ?",
-    [
-      {
-        role_id: newrole,
-      },
-      {
-        last_name: worker,
-      },
-    ],
-    function (err, res) {
-      if (err) {
-        console.log(err);
-      }
-      console.log(res.affectedRows + " employee updated!\n");
-      // Call deleteProduct AFTER the UPDATE completes
-      // retruns the updated employee table
-      console.table(employee);
-      // re-promt user
-      start();
-    }
-  );
+  // sequelize.query(
+  //   // updated employee with the user provided role id and last name
+  //   "UPDATE employees SET ? WHERE ?",
+  //   [
+  //     {
+  //       role_id: newrole,
+  //     },
+  //     {
+  //       last_name: worker,
+  //     },
+  //   ],
+  //   function (err, res) {
+  //     if (err) {
+  //       console.log(err);
+  //     }
+  //     console.log(res.affectedRows + " employee updated!\n");
+
+  //     console.table(employee);
+
+  //     start();
+  //   }
+  // );
 }
 
 async function viewRole() {
